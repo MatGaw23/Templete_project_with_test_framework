@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build app",
+            "type": "shell",
+            "command": "mingw32-make.exe",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "run app",
+            "type": "shell",
+            "command": "./Templete.exe",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "build tests",
+            "type": "shell",
+            "command": "mingw32-make.exe",
+            "options": {
+                "cwd": "${workspaceFolder}/tests/build"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "run tests",
+            "type": "shell",
+            "command": "./test.exe",
+            "options": {
+                "cwd": "${workspaceFolder}/tests/build"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+    ]
+}
