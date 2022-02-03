@@ -36,7 +36,7 @@
         {
             "label": "run tests",
             "type": "shell",
-            "command": "./test.exe",
+            "command": "./templete_test.exe",
             "options": {
                 "cwd": "${workspaceFolder}/tests/build"
             },

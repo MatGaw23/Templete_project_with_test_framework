@@ -2,6 +2,16 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Template)
 
-set(CMAKE_CXX_STANDARD 11)
+set(INCLUDE_DIRS
+    ${PROJECT_SOURCE_DIR}/src
+    )
 
-add_executable(Templete src/templete.cpp)
+set(C_SRC
+    ${PROJECT_SOURCE_DIR}/src/templete.c
+    )
+
+add_subdirectory(tests)
+add_executable(Templete "${C_SRC}")
+target_include_directories(Templete PUBLIC
+                            "${INCLUDE_DIRS}"
+                          )
